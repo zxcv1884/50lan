@@ -13,7 +13,7 @@ class Create50lanOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('50lan_orders', function (Blueprint $table) {
+        Schema::create('lan_orders', function (Blueprint $table) {
             $table->increments('id');
             $table->char('order_address',64)->collation('utf8_general_ci');
             $table->timestamp('order_at');
@@ -29,6 +29,6 @@ class Create50lanOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('50lan_orders');
+        Schema::dropIfExists('lan_orders');
     }
 }

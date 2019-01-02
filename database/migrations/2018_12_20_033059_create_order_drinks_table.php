@@ -24,7 +24,7 @@ class Create50lanOrderDrinksTable extends Migration
 
         Schema::table('50lan_order_drinks', function (Blueprint $table) {
             $table->foreign('drink_id')->references('id')->on('50lan_drinks');
-            $table->foreign('order_id')->references('id')->on('50lan_orders');
+            $table->foreign('order_id')->references('id')->on('lan_orders');
         });
     }
 

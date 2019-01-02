@@ -70,7 +70,7 @@
 <div class="flex-center position-ref full-height">
     <div class="content">
         @yield('contents')
-        @include('footer')
+        {{--@include('footer')--}}
     </div>
 </div>
 </body>
