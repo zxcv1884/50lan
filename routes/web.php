@@ -14,4 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('lan_orders','OrderController');
+Route::resource('serve','OrderController');
+Route::resource('drinks', 'drinksController');
