@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Create50lanOrderDrinksTable extends Migration
+class CreatelanOrderDrinksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Create50lanOrderDrinksTable extends Migration
      */
     public function up()
     {
-        Schema::create('50lan_order_drinks', function (Blueprint $table) {
+        Schema::create('lan_order_drinks', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('drink_id')->unsigned();
             $table->char('drink_ice',2)->collation('utf8_general_ci');
@@ -22,8 +22,8 @@ class Create50lanOrderDrinksTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('50lan_order_drinks', function (Blueprint $table) {
-            $table->foreign('drink_id')->references('id')->on('50lan_drinks');
+        Schema::table('lan_order_drinks', function (Blueprint $table) {
+            $table->foreign('drink_id')->references('id')->on('lan_drinks');
             $table->foreign('order_id')->references('id')->on('lan_orders');
         });
     }

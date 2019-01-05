@@ -16,3 +16,11 @@ Route::get('/', function () {
 });
 Route::resource('serve','OrderController');
 Route::resource('drinks', 'drinksController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+Route::get('logout', 'Auth\LoginController@logout', function () {
+    return abort(404);
+});

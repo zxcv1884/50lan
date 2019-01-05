@@ -16,12 +16,12 @@ class drinksController extends Controller
     public function index()
     {
         $types = lan_types::all();
-        $teas = DB::table('lan_drinks')->where('type_id', '=', 1)->get();
-        $milkteas = DB::table('lan_drinks')->where('type_id', '=', 2)->get();
-        $freshs = DB::table('lan_drinks')->where('type_id', '=', 3)->get();
-        $milks= DB::table('lan_drinks')->where('type_id', '=', 4)->get();
+//        $teas = DB::table('lan_drinks')->where('type_id', '=', 1)->get();
+//        $milkteas = DB::table('lan_drinks')->where('type_id', '=', 2)->get();
+//        $freshs = DB::table('lan_drinks')->where('type_id', '=', 3)->get();
+//        $milks= DB::table('lan_drinks')->where('type_id', '=', 4)->get();
         $drinks= lan_drinks::all();
-        return view('drinks.index', compact('types','drinks','teas','milkteas','freshs','milks'));
+        return view('drinks.index', compact('types','drinks'));
     }
 
     /**
