@@ -60,9 +60,9 @@ class drinksController extends Controller
         $order_drink->order_id = ($max_order_id);
          if($order_drink->save() == true)
         {
-            return redirect(route('drinks.index'));
+            return redirect(route('drinks.index'))->with('message', '下訂成功');
         } else {
-            return "新增資料失敗";
+             return redirect('home')->with('error','下訂失敗');
         }
         }
         //

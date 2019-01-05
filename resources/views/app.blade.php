@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.0/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/Lan.css">
     <!-- Styles -->
     <style>
@@ -31,5 +32,30 @@
         </div>
     </main>
 </div>
+@if(session()->has('message'))
+    <script>
+        swal({
+            position: 'center',
+            type: 'success',
+            title:"{{ session('message')}}",
+            showConfirmButton: false,
+            timer: 1500
+        })
+    </script>
+@endif
+
+@if(session()->has('error'))
+    @foreach(session('error') as $y)
+        <script>
+            swal({
+                position: 'center',
+                type: 'error',
+                title: '<?php echo $y ?>',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        </script>
+    @endforeach
+@endif
 </body>
 </html>
