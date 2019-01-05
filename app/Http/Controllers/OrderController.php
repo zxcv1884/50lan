@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Order;
-use App\Order_drink;
+use App\lan_orders;
+use App\lan_order_drinks;
 class OrderController extends Controller
 {
     /**
@@ -15,8 +15,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::all();
-        return view('lan_orders.index', compact('orders'));
+        $orders = lan_orders::all();
+        return view('serve.index', compact('orders'));
     }
 
     /**
@@ -38,7 +38,7 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         if(in_array('order_address',$request)){
-            $order = new Order;
+            $order = new lan_orders;
             $order->order_address = $request['order_address'];
             $order->order_at = $request['order_at'];
             $order->order_finish_at = $request['order_finish_at'];
@@ -50,12 +50,11 @@ class OrderController extends Controller
                 return "新增資料失敗";
             }
         }else{
-            $order_drink = new Order_drink;
+            $order_drink = new lan_order_drinks;
             $order_drink->drink_id = $request['drink_id'];
             $order_drink->drink_ice = $request['drink_ice'];
             $order_drink->drink_sugar = $request['drink_sugar'];
             $order_drink->drink_sugar = $request['order_id'];
-
             if ($order_drink->save() == true)
             {
                 return redirect(route('lan_orders.index'));
@@ -73,9 +72,11 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        $order_id = $id;
-        $order_drink = Order_drink::find($order_id);
-        return view('lan_orders.show', compact('order_drink'));
+        $order_drinks= DB::table('lan_order_drinks')->where('order_id',$id)->get();
+        foreach ($order_drinks as $order_drink){
+        $drink_names[] = DB::table('lan_drinks')->where('id',$order_drink->drink_id)->get();
+        }
+        return view('serve.show', compact('order_drinks','drink_names'));
     }
 
     /**
@@ -86,7 +87,8 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $orders = DB::table('lan_orders')->where('id',$id)->get();
+        return view('serve.edit', compact('orders'));
     }
 
     /**
@@ -98,10 +100,11 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $order = Order::find($id);
-        $order->order_finish_at = now();
+        $order = lan_orders::find($id);
+        $order->order_address = $request->address;
         $order->save();
-        return view('lan_orders.index');
+        $orders = lan_orders::all();
+        return view('serve.index', compact('orders'));
     }
 
     /**
@@ -112,10 +115,11 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('order_drinks')->where('order_id', '=', $id)->delete();
-        $order = Order::find($id);
+        DB::table('lan_order_drinks')->where('order_id', '=', $id)->delete();
+        $order = lan_orders::find($id);
         $order->delete();
-        return view('lan_orders.index');
+        $orders = lan_orders::all();
+        return view('serve.index', compact('orders'));
     }
     public function finish($id)
     {

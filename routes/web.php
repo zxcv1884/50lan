@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('serve/finish','OrderController@finish');
 Route::resource('serve','OrderController');
 Route::resource('drinks', 'drinksController');
 Auth::routes();
@@ -24,3 +25,4 @@ Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout', function () {
     return abort(404);
 });
+Route::resource('all', 'ALLController');

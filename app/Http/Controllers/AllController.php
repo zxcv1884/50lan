@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\lan_orders;
-use App\lan_order_drinks;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use App\lan_types;
-use App\lan_drinks;
-class drinksController extends Controller
+
+class AllController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +13,8 @@ class drinksController extends Controller
      */
     public function index()
     {
-        $types = lan_types::all();
-        $drinks= lan_drinks::all();
-        return view('drinks.index', compact('types','drinks'));
+        $orders = lan_orders::all();
+        return view('serve.all', compact('orders'));
     }
 
     /**
@@ -28,10 +24,6 @@ class drinksController extends Controller
      */
     public function create()
     {
-        $types = lan_types::all();
-        $drinks= lan_drinks::all();
-        $drinks_new = $drinks->pluck('drink','id');
-        return view('drinks.create', compact('types','drinks','drinks_new','drinks_id'));
         //
     }
 
@@ -43,28 +35,6 @@ class drinksController extends Controller
      */
     public function store(Request $request)
     {
-        $order = new lan_orders();
-        $address = $request['address'];
-        if(isset($address)) {
-            $order->order_address = $request['address'];
-        }else{
-            $order->order_address = null;
-        }
-        $order->order_at = now();
-        if ($order->save() == true){
-        $max_order_id = DB::table('lan_orders')->max('id');
-        $order_drink= new lan_order_drinks();
-        $order_drink->drink_id = $request['drink_select'];
-        $order_drink->drink_ice = $request['drink_ice'];
-        $order_drink->drink_sugar = $request['drink_sugar'];
-        $order_drink->order_id = ($max_order_id);
-         if($order_drink->save() == true)
-        {
-            return redirect(route('drinks.index'));
-        } else {
-            return "新增資料失敗";
-        }
-        }
         //
     }
 
@@ -76,7 +46,6 @@ class drinksController extends Controller
      */
     public function show($id)
     {
-        return view('drinks.show');
         //
     }
 
@@ -111,6 +80,10 @@ class drinksController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $order = lan_orders::find($id);
+        $order->order_finish_at = now();
+        $order->save();
+        $orders = lan_orders::all();
+        return view('serve.index', compact('orders'));
     }
 }

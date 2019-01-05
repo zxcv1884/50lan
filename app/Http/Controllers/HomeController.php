@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\lan_drinks;
+use App\lan_types;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('drinks.create');
+        $types = lan_types::all();
+        $drinks= lan_drinks::all();
+        return view('drinks.index', compact('types','drinks'));
     }
 }

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Order_drink extends Model
+class lan_order_drinks extends Model
 {
     protected $primaryKey = 'id';
 
