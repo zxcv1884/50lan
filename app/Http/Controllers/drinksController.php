@@ -28,10 +28,9 @@ class drinksController extends Controller
      */
     public function create()
     {
-        $types = lan_types::all();
         $drinks= lan_drinks::all();
         $drinks_new = $drinks->pluck('drink','id');
-        return view('drinks.create', compact('types','drinks','drinks_new','drinks_id'));
+        return view('drinks.create', compact('drinks_new'));
         //
     }
 
@@ -62,7 +61,7 @@ class drinksController extends Controller
         {
             return redirect(route('drinks.index'))->with('message', '下訂成功');
         } else {
-             return redirect('home')->with('error','下訂失敗');
+             return redirect('drinks.index')->with('error','下訂失敗');
         }
         }
         //

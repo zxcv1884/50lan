@@ -87,8 +87,12 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
+        $order_drinks= DB::table('lan_order_drinks')->where('order_id',$id)->get();
+        foreach ($order_drinks as $order_drink){
+            $drink_names[] = DB::table('lan_drinks')->where('id',$order_drink->drink_id)->get();
+        }
         $orders = DB::table('lan_orders')->where('id',$id)->get();
-        return view('serve.edit', compact('orders'));
+        return view('serve.edit', compact('orders','order_drinks','drink_names'));
     }
 
     /**

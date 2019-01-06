@@ -26,3 +26,5 @@ Route::get('logout', 'Auth\LoginController@logout', function () {
     return abort(404);
 });
 Route::resource('all', 'ALLController');
+Route::resource('edit-types', 'EditTypesController');
+Route::resource('edit-drinks', 'EditDrinksController');

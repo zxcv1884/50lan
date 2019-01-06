@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\lan_order_drinks;
-use App\lan_orders;
-use Illuminate\Http\Request;
 use App\lan_drinks;
-use Illuminate\Support\Facades\DB;
-class AllController extends Controller
+use Illuminate\Http\Request;
+
+class EditDrinksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,8 @@ class AllController extends Controller
      */
     public function index()
     {
-        $orders = lan_orders::all();
-        return view('serve.all', compact('orders'));
+        $drinks = lan_drinks::all();
+        return view('serve.drinks', compact('drinks'));
     }
 
     /**
@@ -26,7 +24,7 @@ class AllController extends Controller
      */
     public function create()
     {
-        //
+        return view('serve.create-drinks');
     }
 
     /**
@@ -37,7 +35,16 @@ class AllController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $drink = new lan_drinks();
+        $drink->type_id = $request['type_id'];
+        $drink->drink = $request['drink'];
+        $drink->drink_price = $request['drink_price'];
+        if ($drink->save() == true)
+        {
+            return redirect(route('edit-drinks.index'))->with('message', '新增飲料成功');
+        } else {
+            return redirect('edit-drinks.index')->with('error','新增飲料失敗');
+        }
     }
 
     /**
@@ -59,10 +66,8 @@ class AllController extends Controller
      */
     public function edit($id)
     {
-        $drinks= lan_drinks::all();
-        $drinks_new = $drinks->pluck('drink','id');
-        $order_drinks = DB::table('lan_order_drinks')->where('id',$id)->get();
-        return view('serve.edit-detail', compact('order_drinks','drinks_new'));
+        $drinks = lan_drinks::find($id);
+        return view('serve.edit-drinks', compact('drinks'));
     }
 
     /**
@@ -74,13 +79,13 @@ class AllController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $order_drink = lan_order_drinks::find($id);
-        $order_drink->drink_id = $request['drink_select'];
-        $order_drink->drink_ice = $request['drink_ice'];
-        $order_drink->drink_sugar = $request['drink_sugar'];
-        $order_drink->save();
-        $orders = lan_orders::all();
-        return view('serve.index', compact('orders'));
+        $drink = lan_drinks::find($id);
+        $drink->type_id = $request['type_id'];
+        $drink->drink = $request['drink'];
+        $drink->drink_price = $request['drink_price'];
+        $drink->save();
+        $drinks = lan_drinks::all();
+        return view('serve.drinks', compact('drinks'));
     }
 
     /**
@@ -91,10 +96,9 @@ class AllController extends Controller
      */
     public function destroy($id)
     {
-        $order = lan_orders::find($id);
-        $order->order_finish_at = now();
-        $order->save();
-        $orders = lan_orders::all();
-        return view('serve.index', compact('orders'));
+        $drink = lan_drinks::find($id);
+        $drink->delete();
+        $drinks = lan_drinks::all();
+        return view('serve.drinks', compact('drinks'));
     }
 }
