@@ -52,11 +52,17 @@ class drinksController extends Controller
         $order->order_at = now();
         if ($order->save() == true){
         $max_order_id = DB::table('lan_orders')->max('id');
+        for($i=0;$i<=$request['drink_many'];$i++){
         $order_drink= new lan_order_drinks();
-        $order_drink->drink_id = $request['drink_select'];
-        $order_drink->drink_ice = $request['drink_ice'];
-        $order_drink->drink_sugar = $request['drink_sugar'];
+        $drink_select[] =$request['drink_select'];
+        $drink_ice[]=$request['drink_ice'];
+        $drink_sugar[]=$request['drink_sugar'];
+        $order_drink->drink_id = $drink_select[0][$i];
+        $order_drink->drink_ice = $drink_ice[0][$i];
+        $order_drink->drink_sugar = $drink_sugar[0][$i];
         $order_drink->order_id = ($max_order_id);
+        $order_drink->save();
+        }
          if($order_drink->save() == true)
         {
             return redirect(route('drinks.index'))->with('message', '下訂成功');
