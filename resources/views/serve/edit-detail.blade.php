@@ -27,9 +27,7 @@
                                 {!! Form::Submit('確認送出',['class'=>'btn btn-outline-dark form-control']) !!}
                             </div>
                             @endforeach
-
                         </div>
-
                     </div>
                     {!! Form::close() !!}
                 </div>

@@ -25,14 +25,12 @@
                                     {!! Form::Submit('確認送出',['class'=>'btn btn-outline-dark form-control']) !!}
                                 </div>
                                 <hr>
-
                             </div>
-
-                        </div>
                         {!! Form::close() !!}
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 @endsection

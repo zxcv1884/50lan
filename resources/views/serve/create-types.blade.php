@@ -19,11 +19,9 @@
                                     {!! Form::Submit('確認送出',['class'=>'btn btn-outline-dark form-control']) !!}
                                 </div>
                                 <hr>
-
                             </div>
-
+                            {!! Form::close() !!}
                         </div>
-                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>
