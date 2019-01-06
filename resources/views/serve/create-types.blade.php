@@ -12,7 +12,7 @@
                             {!! Form::open(['url' => 'edit-types']) !!}
                             <div class="order-clone col-sm-7 infov2 fontstyle">
                                 <div class="form-group row form-text">
-                                    {!! Form::label('type', '種類名稱：'),   Form::text('type',null,['class'=>'form-control']); !!}
+                                    {!! Form::label('type', '種類名稱：'),   Form::text('type',null,['class'=>'form-control','required' => 'required']); !!}
                                 </div>
                                 <div class="form-group row">
                                     {!! Form::reset('重新輸入' ,['class'=>'btn btn-outline-dark form-control'])!!}

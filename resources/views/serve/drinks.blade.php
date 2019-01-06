@@ -21,12 +21,12 @@
                             <td>{{ $drink->type_id }}</td>
                             <td>
                                 {!! Form::open(['route' => ['edit-drinks.edit', $drink->id], 'method' => 'get']) !!}
-                                {!! Form::submit('修改') !!}
+                                {!! Form::submit('修改',array('class'=>'btn btn-outline-dark')) !!}
                                 {!! Form::close() !!}
                             </td>
                             <td>
                                 {!! Form::open(['route' => ['edit-drinks.destroy', $drink->id], 'method' => 'delete']) !!}
-                                {!! Form::submit('刪除') !!}
+                                {!! Form::submit('刪除',array('class'=>'btn btn-outline-dark')) !!}
                                 {!! Form::close() !!}
                             </td>
                         </tr>

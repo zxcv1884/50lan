@@ -52,7 +52,7 @@
                                                 <td>{{$order_drink->drink_sugar}}</td>
                                                 <td>
                                                     {!! Form::open(['route' => ['all.edit', $order_drink->id], 'method' => 'get']) !!}
-                                                    {!! Form::submit('修改') !!}
+                                                    {!! Form::submit('修改',array('class'=>'btn btn-outline-dark')) !!}
                                                     {!! Form::close() !!}
                                                 </td>
                                             </tr>

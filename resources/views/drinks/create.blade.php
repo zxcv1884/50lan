@@ -14,8 +14,9 @@
 
                                         <div class="form-group row">
                                             {!! Form::label('drink_many', '飲料杯數：') !!}
-                                            {!! Form::select('drink_many',array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20),null,array('class' => 'form-control'))!!}
+                                            {!! Form::select('drink_many',array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20),null,array('class' => 'form-control drink_many'))!!}
                                         </div>
+                                    <hr>
                                     <div class="form-group row clone">
                                         {!! Form::label('drink', '飲料名稱：') !!}
                                         {!! Form::select('drink_select[]',($drinks_new),null,array('class' => 'form-control'))!!}
@@ -56,7 +57,7 @@
             }
             return this.pushStack( tmp );
         };
-        $('select').on('change', function() {
+        $('.drink_many').on('change', function() {
             $('.create').html("");
         $( ".clone" ).duplicate(this.value).appendTo( ".create" )
         });

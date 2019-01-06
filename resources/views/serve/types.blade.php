@@ -17,12 +17,12 @@
                                 <td>{{ $type->type }}</td>
                                 <td>
                                     {!! Form::open(['route' => ['edit-types.edit', $type->id], 'method' => 'get']) !!}
-                                    {!! Form::submit('修改') !!}
+                                    {!! Form::submit('修改',array('class'=>'btn btn-outline-dark')) !!}
                                     {!! Form::close() !!}
                                 </td>
                                 <td>
                                     {!! Form::open(['route' => ['edit-types.destroy', $type->id], 'method' => 'delete']) !!}
-                                    {!! Form::submit('刪除') !!}
+                                    {!! Form::submit('刪除',array('class'=>'btn btn-outline-dark' )) !!}
                                     {!! Form::close() !!}
                                 </td>
                             </tr>

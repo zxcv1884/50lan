@@ -23,22 +23,22 @@
                 </td>
                 <td>
                     {!! Form::open(['route' => ['serve.show', $order->id], 'method' => 'get']) !!}
-                    {!! Form::submit('詳細') !!}
+                    {!! Form::submit('詳細',array('class'=>'btn btn-outline-dark')) !!}
                     {!! Form::close() !!}
                 </td>
                 <td>
                     {!! Form::open(['route' => ['serve.edit', $order->id], 'method' => 'get']) !!}
-                    {!! Form::submit('修改') !!}
+                    {!! Form::submit('修改',array('class'=>'btn btn-outline-dark')) !!}
                     {!! Form::close() !!}
                 </td>
                 <td>
                     {!! Form::open(['route' => ['serve.destroy', $order->id], 'method' => 'delete']) !!}
-                    {!! Form::submit('刪除') !!}
+                    {!! Form::submit('刪除',array('class'=>'btn btn-outline-dark')) !!}
                     {!! Form::close() !!}
                 </td>
                 <td>
                     {!! Form::open(['route' => ['all.destroy', $order->id], 'method' => 'delete']) !!}
-                    {!! Form::submit('訂單完成') !!}
+                    {!! Form::submit('訂單完成',array('class'=>'btn btn-outline-dark')) !!}
                     {!! Form::close() !!}
                 </td>
             </tr>
