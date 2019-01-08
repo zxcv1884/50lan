@@ -78,9 +78,12 @@ class AllController extends Controller
         $order_drink->drink_id = $request['drink_select'];
         $order_drink->drink_ice = $request['drink_ice'];
         $order_drink->drink_sugar = $request['drink_sugar'];
-        $order_drink->save();
-        $orders = lan_orders::all();
-        return view('serve.index', compact('orders'));
+        if( $order_drink->save() == true)
+        {
+            return redirect(route('serve.index'))->with('message', '訂單修改成功');
+        } else {
+            return redirect(route('serve.index'))->with('error','訂單修改失敗');
+        }
     }
 
     /**
@@ -93,8 +96,11 @@ class AllController extends Controller
     {
         $order = lan_orders::find($id);
         $order->order_finish_at = now();
-        $order->save();
-        $orders = lan_orders::all();
-        return view('serve.index', compact('orders'));
+        if( $order->save() == true)
+        {
+            return redirect(route('serve.index'))->with('message', '訂單完成');
+        } else {
+            return redirect(route('serve.index'))->with('error','訂單失敗');
+        }
     }
 }

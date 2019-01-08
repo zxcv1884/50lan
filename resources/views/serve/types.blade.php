@@ -3,7 +3,7 @@
 @section('contents')
     <div class="container">
         <div class="content">
-            <div class="info col-md-4">
+            <div class="info col-md-5">
                 <table border="1" align="center" >
                     <tr>
                         <th>種類編號</th>

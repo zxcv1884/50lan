@@ -37,31 +37,6 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        if(in_array('order_address',$request)){
-            $order = new lan_orders;
-            $order->order_address = $request['order_address'];
-            $order->order_at = $request['order_at'];
-            $order->order_finish_at = $request['order_finish_at'];
-
-            if ($order->save() == true)
-            {
-                return redirect(route('lan_orders.index'));
-            } else {
-                return "新增資料失敗";
-            }
-        }else{
-            $order_drink = new lan_order_drinks;
-            $order_drink->drink_id = $request['drink_id'];
-            $order_drink->drink_ice = $request['drink_ice'];
-            $order_drink->drink_sugar = $request['drink_sugar'];
-            $order_drink->drink_sugar = $request['order_id'];
-            if ($order_drink->save() == true)
-            {
-                return redirect(route('lan_orders.index'));
-            } else {
-                return "新增資料失敗";
-            }
-        }
     }
 
     /**
@@ -106,9 +81,12 @@ class OrderController extends Controller
     {
         $order = lan_orders::find($id);
         $order->order_address = $request->address;
-        $order->save();
-        $orders = lan_orders::all();
-        return view('serve.index', compact('orders'));
+        if( $order->save() == true)
+        {
+            return redirect(route('serve.index'))->with('message', '更新訂單成功');
+        } else {
+            return redirect(route('serve.index'))->with('error','更新訂單失敗');
+        }
     }
 
     /**
@@ -121,9 +99,12 @@ class OrderController extends Controller
     {
         DB::table('lan_order_drinks')->where('order_id', '=', $id)->delete();
         $order = lan_orders::find($id);
-        $order->delete();
-        $orders = lan_orders::all();
-        return view('serve.index', compact('orders'));
+        if( $order->delete() == true)
+        {
+            return redirect(route('serve.index'))->with('message', '刪除成功');
+        } else {
+            return redirect(route('serve.index'))->with('error','刪除失敗');
+        }
     }
     public function finish($id)
     {

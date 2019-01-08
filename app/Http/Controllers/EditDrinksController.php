@@ -83,9 +83,12 @@ class EditDrinksController extends Controller
         $drink->type_id = $request['type_id'];
         $drink->drink = $request['drink'];
         $drink->drink_price = $request['drink_price'];
-        $drink->save();
-        $drinks = lan_drinks::all();
-        return view('serve.drinks', compact('drinks'));
+        if( $drink->save() == true)
+        {
+            return redirect(route('edit-drinks.index'))->with('message', '更新成功');
+        } else {
+            return redirect(route('edit-drinks.index'))->with('error','更新失敗');
+        }
     }
 
     /**
@@ -97,8 +100,11 @@ class EditDrinksController extends Controller
     public function destroy($id)
     {
         $drink = lan_drinks::find($id);
-        $drink->delete();
-        $drinks = lan_drinks::all();
-        return view('serve.drinks', compact('drinks'));
+        if( $drink->delete() == true)
+        {
+            return redirect(route('edit-drinks.index'))->with('message', '刪除成功');
+        } else {
+            return redirect(route('edit-drinks.index'))->with('error','刪除失敗');
+        }
     }
 }

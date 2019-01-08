@@ -82,9 +82,12 @@ class EditTypesController extends Controller
     {
         $types = lan_types::find($id);
         $types->type = $request->type;
-        $types->save();
-        $types = lan_types::all();
-        return view('serve.types', compact('types'));
+        if( $types->save() == true)
+        {
+            return redirect(route('edit-types.index'))->with('message', '更新成功');
+        } else {
+            return redirect(route('edit-types.index'))->with('error','更新失敗');
+        }
     }
 
     /**
@@ -97,8 +100,11 @@ class EditTypesController extends Controller
     {
         DB::table('lan_drinks')->where('type_id', '=', $id)->delete();
         $type = lan_types::find($id);
-        $type->delete();
-        $types = lan_types::all();
-        return view('serve.types', compact('types'));
+        if( $type->delete() == true)
+        {
+            return redirect(route('edit-types.index'))->with('message', '刪除成功');
+        } else {
+            return redirect(route('edit-types.index'))->with('error','刪除失敗');
+        }
     }
 }

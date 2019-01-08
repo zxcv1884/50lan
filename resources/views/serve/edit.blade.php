@@ -24,23 +24,23 @@
                                         {!! Form::close() !!}
                                         <hr>
                                 </div>
-                                <div class="col-md-8 infov2 fontstyle">
+                                <div class="col-sm-8 infov2 fontstyle">
 
-                                    <table border="1" align="center"  style="display: inline-table;  word-spacing: -6px; margin-left: -5px;">
+                                    <table border="1" align="center"  style="display: inline-table;  word-spacing: -6px;margin-left: 5% ; ">
                                         <tr><th>編號</th></tr>
                                         @foreach($order_drinks as $order_drink)
                                             <tr><td>{{ $order_drink->id }}</td></tr>
                                         @endforeach
                                     </table>
 
-                                    <table border="1" align="center" style="display: inline-table;  word-spacing: -6px;margin-left: -5px">
+                                    <table border="1" align="center" style="display: inline-table;  word-spacing: -6px;margin-left: -6px ;">
                                         <tr><th>飲料</th></tr>
                                         @foreach($drink_names as $drink_name)
                                             <tr><td>{{$drink_name[0]->drink}}</td></tr>
                                         @endforeach
                                     </table>
 
-                                    <table border="1" align="center" style="display: inline-table;  word-spacing: -6px;margin-left: -5px">
+                                    <table border="1" align="center" style="display: inline-table;  word-spacing: -6px;margin-left: -5.5px">
                                         <tr>
                                             <th>冰塊</th>
                                             <th>甜度</th>
