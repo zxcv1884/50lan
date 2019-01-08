@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c75c700e-8146-46e3-8845-87474a561de8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AllController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AllController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EditDrinksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EditDrinksController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EditTypesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EditTypesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/Lan.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/Lan.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/serve/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/serve/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/serve/types.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/serve/types.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_12_20_033014_create_lan_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_12_20_033014_create_lan_orders_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,19 +18,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/drinksController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EditDrinksController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="85" selection-start-line="85" selection-end-line="90" selection-end-column="9" />
+            <state relative-caret-position="133">
+              <caret line="85" column="17" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -43,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EditTypesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="107" column="9" lean-forward="true" selection-start-line="102" selection-start-column="7" selection-end-line="107" selection-end-column="9" />
+            <state relative-caret-position="1530">
+              <caret line="104" column="18" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -52,35 +38,77 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="101" selection-start-line="101" selection-end-line="106" selection-end-column="9" />
+            <state relative-caret-position="-989">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="638" lean-forward="true" selection-start-line="638" selection-end-line="638" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="71" column="6" lean-forward="true" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/drinksController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3">
+              <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AllController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="98" column="35" lean-forward="true" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+              <folding>
+                <element signature="e#40#65#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_20_033059_create_lan_order_drinks_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_20_033015_create_lan_drinks_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AllController.php">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_20_033014_create_lan_orders_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/serve/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="375">
+              <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -95,6 +123,7 @@
       <find>50嵐訂單：</find>
       <find>types</find>
       <find>drinks</find>
+      <find>now</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,7 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Order.php" />
         <option value="$PROJECT_DIR$/app/Order_drink.php" />
         <option value="$PROJECT_DIR$/resources/views/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/50lan_orders/add.blade.php" />
@@ -113,7 +141,6 @@
         <option value="$PROJECT_DIR$/app/drinks.php" />
         <option value="$PROJECT_DIR$/app/Drinks.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/lan_types.php" />
         <option value="$PROJECT_DIR$/app/Types.php" />
         <option value="$PROJECT_DIR$/app/lan_drinks.php" />
@@ -133,7 +160,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
         <option value="$PROJECT_DIR$/resources/views/serve/all.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/serve/index.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_12_20_033014_create_lan_orders_table.php" />
         <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/serve/edit-detail.blade.php" />
@@ -141,7 +167,6 @@
         <option value="$PROJECT_DIR$/resources/views/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/serve/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/drinksController.php" />
         <option value="$PROJECT_DIR$/resources/views/drinks/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/serve/create-types.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/serve/create-drinks.blade.php" />
@@ -153,7 +178,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/EditDrinksController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EditTypesController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/drinksController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AllController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_12_20_033014_create_lan_orders_table.php" />
       </list>
     </option>
   </component>
@@ -253,7 +282,7 @@
       <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="808" />
@@ -430,12 +459,13 @@
       <workItem from="1546776449897" duration="4403000" />
       <workItem from="1546782891237" duration="1851000" />
       <workItem from="1546940452708" duration="1298000" />
-      <workItem from="1546983852324" duration="1857000" />
+      <workItem from="1546983852324" duration="1900000" />
+      <workItem from="1546985848316" duration="1332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130601000" />
+    <option name="totallyTimeSpent" value="131976000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,10 +477,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="808" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="808" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22961374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23247497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -517,12 +547,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Assert/Functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -581,27 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_20_033014_create_lan_orders_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_20_033059_create_lan_order_drinks_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_20_033015_create_lan_drinks_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -783,30 +786,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EditTypesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="107" column="9" lean-forward="true" selection-start-line="102" selection-start-column="7" selection-end-line="107" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EditDrinksController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="85" selection-start-line="85" selection-end-line="90" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/drinksController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/serve/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="405">
           <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
@@ -814,21 +796,83 @@
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="28" />
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="71" column="6" lean-forward="true" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="638" lean-forward="true" selection-start-line="638" selection-end-line="638" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EditTypesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="104" column="18" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EditDrinksController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="85" column="17" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="101" selection-start-line="101" selection-end-line="106" selection-end-column="9" />
+        <state relative-caret-position="-989">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/drinksController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AllController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
+        <state relative-caret-position="191">
+          <caret line="98" column="35" lean-forward="true" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+          <folding>
+            <element signature="e#40#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_20_033059_create_lan_order_drinks_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_20_033015_create_lan_drinks_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_20_033014_create_lan_orders_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
