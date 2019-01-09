@@ -11,7 +11,7 @@
                         <div class="head-title2 card-header card-header-color ">新增種類</div>
                         <div class="card-body card-body-color ">
                             {!! Form::open(['url' => 'edit-types']) !!}
-                            <div class="order-clone col-sm-7 infov2 fontstyle">
+                            <div class="order-clone col-sm-7 infov2 fontstyle   bottom">
                                 <div class="form-group row form-text">
                                     {!! Form::label('type', '種類名稱：'),   Form::text('type',null,['class'=>'form-control','required' => 'required']); !!}
                                 </div>

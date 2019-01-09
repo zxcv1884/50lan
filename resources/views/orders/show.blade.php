@@ -4,7 +4,7 @@
     @auth
     <div class="container">
         <div class="content">
-            <div class="info col-md-4">
+            <div class="info col-md-4 bottom">
                 <table border="1" align="center" >
                     <tr>
                         <th>編號</th>

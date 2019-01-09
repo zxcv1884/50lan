@@ -166,3 +166,6 @@ table, td, th {
     border-collapse: collapse;
     border: 1px solid #000;
 }
+.bottom{
+    margin-bottom: 5%;
+}

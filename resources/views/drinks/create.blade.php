@@ -10,7 +10,7 @@
                         <div class="head-title2 card-header card-header-color ">飲料訂單</div>
                             <div class="card-body card-body-color ">
                             {!! Form::open(['url' => 'drinks']) !!}
-                                <div class="order-clone col-sm-9 infov2 fontstyle">
+                                <div class="order-clone col-sm-9 infov2 fontstyle bottom">
 
                                         <div class="form-group row">
                                             {!! Form::label('drink_many', '飲料杯數：') !!}

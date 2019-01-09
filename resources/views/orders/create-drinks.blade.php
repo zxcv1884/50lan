@@ -11,7 +11,7 @@
                         <div class="head-title2 card-header card-header-color ">新增飲料</div>
                         <div class="card-body card-body-color ">
                             {!! Form::open(['url' => 'edit-drinks']) !!}
-                            <div class="order-clone col-sm-7 infov2 fontstyle">
+                            <div class="order-clone col-sm-7 infov2 fontstyle bottom">
                                 <div class="form-group row form-text">
                                     {!! Form::label('type_id', '種類編號(數字)：'),   Form::text('type_id',null,['class'=>'form-control','required' => 'required']); !!}
                                 </div>

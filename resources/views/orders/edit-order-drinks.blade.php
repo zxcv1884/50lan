@@ -11,7 +11,7 @@
                     <div class="head-title2 card-header card-header-color ">修改訂單</div>
                     <div class="card-body card-body-color ">
                         {!! Form::open(array('method'=>'PUT','route' => ['orders.update-order-drinks', $order_drink->id])) !!}
-                        <div class="order-clone col-sm-9 infov2 fontstyle">
+                        <div class="order-clone col-sm-9 infov2 fontstyle bottom">
                             <div class="form-group row">
                                 {!! Form::label('drink', '飲料名稱：') !!}
                                 {!! Form::select('drink_select',($drinks_new),$order_drink->drink_id,array('class' => 'form-control'))!!}

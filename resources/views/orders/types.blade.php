@@ -29,7 +29,7 @@
                             </tr>
                     @endforeach
                 </table>
-                <div class="info">
+                <div class="info bottom">
                     <a href="{{ URL::route('edit-types.create') }}" class="btn btn-outline-dark form-control">新增 </a>
                 </div>
             </div>

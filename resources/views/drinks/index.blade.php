@@ -6,7 +6,7 @@
             <div class="head-title1 m-b-md">
     <h2>飲料表</h2>
             </div>
-            <div class="info col-md-9">
+            <div class="info col-md-9 bottom">
                 @foreach($types as $type)
                     <table border="1" align="center" width="179" style="display: inline-table; margin-left: 2%">
                     <tr>

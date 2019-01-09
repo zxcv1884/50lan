@@ -2,7 +2,7 @@
 
 @section('contents')
     @auth
-    <div class="info">
+    <div class="info bottom">
     <table border="1" align="center">
         <tr>
             <th>訂單編號</th>

@@ -23,7 +23,7 @@
                                         {!! Form::close() !!}
                                         <hr>
                                 </div>
-                                <div class="col-sm-8 infov2 fontstyle">
+                                <div class="col-sm-8 infov2 fontstyle bottom">
 
                                     <table border="1" align="center">
                                         <tr>

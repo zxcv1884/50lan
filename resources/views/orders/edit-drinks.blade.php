@@ -10,7 +10,7 @@
                     <div class="card">
                         <div class="head-title2 card-header card-header-color ">修改種類</div>
                             <div class="card-body card-body-color ">
-                                <div class="order-clone col-sm-7 infov2 fontstyle">
+                                <div class="order-clone col-sm-7 infov2 fontstyle bottom">
                                     {!! Form::open(array('method'=>'PUT','route' => ['edit-drinks.update', $drinks->id])) !!}
                                     <div class="form-group row form-text">
                                         {!! Form::label('type_id', '種類編號(數字)：'),   Form::text('type_id',$drinks->type_id,['placeholder'=>"$drinks->type_id",'class'=>'form-control','required' => 'required']); !!}
