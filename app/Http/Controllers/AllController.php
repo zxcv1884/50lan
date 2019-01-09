@@ -94,13 +94,5 @@ class AllController extends Controller
      */
     public function destroy($id)
     {
-        $order = lan_orders::find($id);
-        $order->order_finish_at = now();
-        if( $order->save() == true)
-        {
-            return redirect(route('serve.index'))->with('message', '訂單完成');
-        } else {
-            return redirect(route('serve.index'))->with('error','訂單失敗');
-        }
     }
 }

@@ -27,6 +27,6 @@ class CreatelanTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('50lan_types');
+        Schema::dropIfExists('lan_types');
     }
 }

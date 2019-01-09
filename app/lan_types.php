@@ -13,5 +13,11 @@ class lan_types extends Model
     protected $fillable = [
         'type',
     ];
-
+    public function drinks() {
+        return $this->hasMany('App\lan_drinks');
+    }
+    public function delete() {
+        $this->drinks()->delete();
+        return parent::delete();
+    }
 }

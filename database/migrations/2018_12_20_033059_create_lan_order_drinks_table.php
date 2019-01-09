@@ -35,6 +35,6 @@ class CreatelanOrderDrinksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('50lan_order_drinks');
+        Schema::dropIfExists('lan_order_drinks');
     }
 }

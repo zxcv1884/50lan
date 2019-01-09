@@ -28,3 +28,4 @@ Route::get('logout', 'Auth\LoginController@logout', function () {
 Route::resource('all', 'ALLController');
 Route::resource('edit-types', 'EditTypesController');
 Route::resource('edit-drinks', 'EditDrinksController');
+Route::get('server.finish/{id}','OrderController@finish')->name('serve.finish');

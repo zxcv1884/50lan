@@ -99,7 +99,7 @@ class EditDrinksController extends Controller
      */
     public function destroy($id)
     {
-        $drink = lan_drinks::find($id);
+        $drink = lan_drinks::findOrFail($id);
         if( $drink->delete() == true)
         {
             return redirect(route('edit-drinks.index'))->with('message', '刪除成功');

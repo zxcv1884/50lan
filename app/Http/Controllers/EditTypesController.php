@@ -98,8 +98,7 @@ class EditTypesController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('lan_drinks')->where('type_id', '=', $id)->delete();
-        $type = lan_types::find($id);
+        $type = lan_types::findOrFail($id);
         if( $type->delete() == true)
         {
             return redirect(route('edit-types.index'))->with('message', '刪除成功');

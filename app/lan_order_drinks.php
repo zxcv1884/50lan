@@ -15,9 +15,9 @@ class lan_order_drinks extends Model
         'order_id'
     ];
     public function drink() {
-        return $this->belongsTo('App\lan_drinks');
+        return $this->belongsTo('App\lan_drinks','drink_id');
     }
     public function order() {
-        return $this->belongsTo('App\lan_orders');
+        return $this->belongsTo('App\lan_orders','order_id');
     }
 }

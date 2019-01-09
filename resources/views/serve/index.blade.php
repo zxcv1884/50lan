@@ -37,7 +37,7 @@
                     {!! Form::close() !!}
                 </td>
                 <td>
-                    {!! Form::open(['route' => ['all.destroy', $order->id], 'method' => 'delete']) !!}
+                    {!! Form::open(['route' => ['serve.finish', $order->id], 'method' => 'get']) !!}
                     {!! Form::submit('訂單完成',array('class'=>'btn btn-outline-dark')) !!}
                     {!! Form::close() !!}
                 </td>

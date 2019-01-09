@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\lan_orders;
-use App\lan_order_drinks;
 class OrderController extends Controller
 {
     /**
@@ -47,11 +45,8 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        $order_drinks= DB::table('lan_order_drinks')->where('order_id',$id)->get();
-        foreach ($order_drinks as $order_drink){
-        $drink_names[] = DB::table('lan_drinks')->where('id',$order_drink->drink_id)->get();
-        }
-        return view('serve.show', compact('order_drinks','drink_names'));
+        $order = lan_orders::find($id);
+        return view('serve.show', compact('order'));
     }
 
     /**
@@ -62,12 +57,8 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        $order_drinks= DB::table('lan_order_drinks')->where('order_id',$id)->get();
-        foreach ($order_drinks as $order_drink){
-            $drink_names[] = DB::table('lan_drinks')->where('id',$order_drink->drink_id)->get();
-        }
-        $orders = DB::table('lan_orders')->where('id',$id)->get();
-        return view('serve.edit', compact('orders','order_drinks','drink_names'));
+        $order = lan_orders::find($id);
+        return view('serve.edit', compact('order'));
     }
 
     /**
@@ -97,17 +88,25 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('lan_order_drinks')->where('order_id', '=', $id)->delete();
-        $order = lan_orders::find($id);
+        $order = lan_orders::findOrFail($id);
         if( $order->delete() == true)
         {
             return redirect(route('serve.index'))->with('message', '刪除成功');
         } else {
-            return redirect(route('serve.index'))->with('error','刪除失敗');
+            return redirect(route('serve.index'))->with('error', '刪除失敗');
         }
     }
+
+
     public function finish($id)
     {
-
+        $order = lan_orders::find($id);
+        $order->order_finish_at = now();
+        if( $order->save() == true)
+        {
+            return redirect(route('serve.index'))->with('message', '訂單完成');
+        } else {
+            return redirect(route('serve.index'))->with('error','訂單失敗');
+        }
     }
 }
