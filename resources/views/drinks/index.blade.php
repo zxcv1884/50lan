@@ -8,7 +8,7 @@
             </div>
             <div class="info col-md-9">
                 @foreach($types as $type)
-                    <table border="1" align="center" width="179" style="display: inline-table;  word-spacing: -6px;">
+                    <table border="1" align="center" width="179" style="display: inline-table; margin-left: 2%">
                     <tr>
                         <th>{{$type->type}}</th>
                             <th>價格</th>

@@ -9,8 +9,7 @@
                 <div class="card">
                     <div class="head-title2 card-header card-header-color ">修改訂單</div>
                     <div class="card-body card-body-color ">
-                        @foreach($order_drinks as $order_drink)
-                        {!! Form::open(array('method'=>'PUT','route' => ['all.update', $order_drink->id])) !!}
+                        {!! Form::open(array('method'=>'PUT','route' => ['orders.update-order-drinks', $order_drink->id])) !!}
                         <div class="order-clone col-sm-9 infov2 fontstyle">
                             <div class="form-group row">
                                 {!! Form::label('drink', '飲料名稱：') !!}
@@ -26,7 +25,6 @@
                                 {!! Form::reset('重新輸入' ,['class'=>'btn btn-outline-dark form-control'])!!}
                                 {!! Form::Submit('確認送出',['class'=>'btn btn-outline-dark form-control']) !!}
                             </div>
-                            @endforeach
                         </div>
                     </div>
                     {!! Form::close() !!}

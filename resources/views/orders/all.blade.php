@@ -18,7 +18,7 @@
                         <td>{{ $order->order_at }}</td>
                         <td>{{$order->order_finish_at}}</td>
                         <td>
-                            {!! Form::open(['route' => ['serve.show', $order->id], 'method' => 'get']) !!}
+                            {!! Form::open(['route' => ['orders.show', $order->id], 'method' => 'get']) !!}
                             {!! Form::submit('詳細',array('class'=>'btn btn-outline-dark')) !!}
                             {!! Form::close() !!}
                         </td>

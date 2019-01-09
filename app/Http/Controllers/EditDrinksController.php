@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\lan_drinks;
-use Illuminate\Http\Request;
-
+use App\Http\Requests\EditDrinkRequest;
 class EditDrinksController extends Controller
 {
     /**
@@ -11,10 +10,11 @@ class EditDrinksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //管理飲料主頁面
     public function index()
     {
         $drinks = lan_drinks::all();
-        return view('serve.drinks', compact('drinks'));
+        return view('orders.drinks', compact('drinks'));
     }
 
     /**
@@ -22,9 +22,10 @@ class EditDrinksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //新增飲料頁面
     public function create()
     {
-        return view('serve.create-drinks');
+        return view('orders.create-drinks');
     }
 
     /**
@@ -33,7 +34,8 @@ class EditDrinksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    //新增飲料送出後讀進資料庫
+    public function store(EditDrinkRequest $request)
     {
         $drink = new lan_drinks();
         $drink->type_id = $request['type_id'];
@@ -64,10 +66,11 @@ class EditDrinksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //修改飲料名稱.價格.所屬種類
     public function edit($id)
     {
         $drinks = lan_drinks::find($id);
-        return view('serve.edit-drinks', compact('drinks'));
+        return view('orders.edit-drinks', compact('drinks'));
     }
 
     /**
@@ -77,7 +80,8 @@ class EditDrinksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    //該筆修改送出後送至資料庫更新
+    public function update(EditDrinkRequest $request, $id)
     {
         $drink = lan_drinks::find($id);
         $drink->type_id = $request['type_id'];
@@ -97,6 +101,7 @@ class EditDrinksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //刪除該筆飲料
     public function destroy($id)
     {
         $drink = lan_drinks::findOrFail($id);

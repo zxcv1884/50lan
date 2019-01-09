@@ -10,7 +10,7 @@
                         <div class="head-title2 card-header card-header-color ">修改訂單</div>
                             <div class="card-body card-body-color ">
                                 <div class="col-md-9 infov2 fontstyle">
-                                        {!! Form::open(array('method'=>'PUT','route' => ['serve.update', $order->id])) !!}
+                                        {!! Form::open(array('method'=>'PUT','route' => ['orders.update', $order->id])) !!}
                                         <div class="form-group row">
 
                                             {!! Form::label('type', '外送地點：'),   Form::text('address',$order->order_address,['placeholder'=>$order->order_address,'class'=>' form-control']); !!}
@@ -34,12 +34,12 @@
                                         </tr>
                                         @foreach($order->order_drinks as $order_drink)
                                             <tr>
-                                                <td>{{ $order_drink->id }}</td>
+                                                <td>{{$order_drink->id}}</td>
                                                 <td>{{$order_drink->drink->drink}}</td>
-                                                <td>{{ $order_drink->drink_ice }}</td>
+                                                <td>{{$order_drink->drink_ice}}</td>
                                                 <td>{{$order_drink->drink_sugar}}</td>
                                                 <td>
-                                                    {!! Form::open(['route' => ['all.edit', $order_drink->id], 'method' => 'get']) !!}
+                                                    {!! Form::open(['route' => ['orders.edit-order-drinks', $order_drink->id], 'method' => 'get']) !!}
                                                     {!! Form::submit('修改',array('class'=>'btn btn-outline-dark')) !!}
                                                     {!! Form::close() !!}
                                                 </td>

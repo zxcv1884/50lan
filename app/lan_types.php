@@ -14,7 +14,7 @@ class lan_types extends Model
         'type',
     ];
     public function drinks() {
-        return $this->hasMany('App\lan_drinks');
+        return $this->hasMany('App\lan_drinks','type_id');
     }
     public function delete() {
         $this->drinks()->delete();

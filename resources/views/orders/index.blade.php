@@ -22,22 +22,22 @@
                     {{ $order->order_at }}
                 </td>
                 <td>
-                    {!! Form::open(['route' => ['serve.show', $order->id], 'method' => 'get']) !!}
+                    {!! Form::open(['route' => ['orders.show', $order->id], 'method' => 'get']) !!}
                     {!! Form::submit('詳細',array('class'=>'btn btn-outline-dark')) !!}
                     {!! Form::close() !!}
                 </td>
                 <td>
-                    {!! Form::open(['route' => ['serve.edit', $order->id], 'method' => 'get']) !!}
+                    {!! Form::open(['route' => ['orders.edit', $order->id], 'method' => 'get']) !!}
                     {!! Form::submit('修改',array('class'=>'btn btn-outline-dark')) !!}
                     {!! Form::close() !!}
                 </td>
                 <td>
-                    {!! Form::open(['route' => ['serve.destroy', $order->id], 'method' => 'delete']) !!}
+                    {!! Form::open(['route' => ['orders.destroy', $order->id], 'method' => 'delete']) !!}
                     {!! Form::submit('刪除',array('class'=>'btn btn-outline-dark')) !!}
                     {!! Form::close() !!}
                 </td>
                 <td>
-                    {!! Form::open(['route' => ['serve.finish', $order->id], 'method' => 'get']) !!}
+                    {!! Form::open(['route' => ['orders.finish', $order->id], 'method' => 'get']) !!}
                     {!! Form::submit('訂單完成',array('class'=>'btn btn-outline-dark')) !!}
                     {!! Form::close() !!}
                 </td>

@@ -57,5 +57,19 @@
         </script>
     @endforeach
 @endif
+
+@if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <script>
+                swal({
+                    position: 'center',
+                    type: 'error',
+                    title: '<?php echo $error ?>',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            </script>
+        @endforeach
+@endif
 </body>
 </html>
