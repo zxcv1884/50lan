@@ -1,6 +1,7 @@
 @extends('app')
 
 @section('contents')
+    @auth
     <div class="container">
         <div class="content">
             <div class="info col-md-4">
@@ -23,4 +24,5 @@
             </div>
         </div>
     </div>
+    @endauth
 @endsection

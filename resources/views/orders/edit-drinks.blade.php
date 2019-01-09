@@ -1,6 +1,7 @@
 @extends('app')
 
 @section('contents')
+    @auth
     <div class="main">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="container logintop">
@@ -33,4 +34,5 @@
                 </div>
             </div>
         </div>
+    @endauth
 @endsection

@@ -1,6 +1,7 @@
 @extends('app')
 
 @section('contents')
+    @auth
     <div class="info">
         <table border="1" align="center">
             <tr>
@@ -26,4 +27,5 @@
             @endforeach
         </table>
     </div>
+    @endauth
 @endsection
