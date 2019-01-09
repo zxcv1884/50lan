@@ -22,7 +22,7 @@
                                         {!! Form::select('drink_select[]',($drinks_select),null,array('class' => 'form-control'))!!}
                                     </div>
                                     <div class="form-group row clone">
-                                            {!! Form::label('drink_sugar', '甜度：'),Form::select('drink_sugar[]', array( '微糖' => '微糖', '半糖' => '半糖','少糖' => '少糖','無糖' => '無糖', '正常' => '正常'),null,array('class' => 'form-control')) !!}
+                                        {!! Form::label('drink_sugar', '甜度：'),Form::select('drink_sugar[]', array( '微糖' => '微糖', '半糖' => '半糖','少糖' => '少糖','無糖' => '無糖', '正常' => '正常'),null,array('class' => 'form-control')) !!}
                                     </div>
                                     <div class="form-group row clone">
                                         {!! Form::label('drink_ice', '冰塊：'),Form::select('drink_ice[]', array( '微冰' => '微冰', '少冰' => '少冰','正常' => '正常','溫' => '溫', '熱' => '熱'),null,array('class' => 'form-control'))  !!}

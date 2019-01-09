@@ -2,12 +2,12 @@
 
 @section('contents')
     @auth
-    <div class="main">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <div class="container logintop">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
+        <div class="main">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <div class="container logintop">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
                         <div class="head-title2 card-header card-header-color ">修改訂單</div>
                             <div class="card-body card-body-color ">
                                 <div class="col-md-9 infov2 fontstyle">
@@ -54,6 +54,5 @@
                 </div>
             </div>
         </div>
-    </div>
     @endauth
 @endsection

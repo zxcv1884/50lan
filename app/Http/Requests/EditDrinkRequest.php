@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 use App\lan_types;
 use Illuminate\Foundation\Http\FormRequest;
+use phpDocumentor\Reflection\Types\Integer;
 
 class EditDrinkRequest extends FormRequest
 {
@@ -24,7 +25,7 @@ class EditDrinkRequest extends FormRequest
     public function rules()
     {
         return [
-            'type_id'=>'required | min:1 | max:3',
+            'type_id'=>'required | min:1 | max:3| integer',
             'drink'=>'required | min:1 | max:8' ,
             'drink_price'=>'required | min:1 | max:5 | integer'
         ];
