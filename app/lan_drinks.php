@@ -15,5 +15,8 @@ class lan_drinks extends Model
         'drink',
         'drink_price'
     ];
+    public function type() {
+        return $this->belongsTo('App\lan_types');
+    }
 
 }

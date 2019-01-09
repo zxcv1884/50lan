@@ -9,7 +9,7 @@
                         <th>飲料編號</th>
                         <th>飲料名稱</th>
                         <th>飲料價格</th>
-                        <th>種類編號</th>
+                        <th>種類名稱</th>
                         <th>修改</th>
                         <th>刪除</th>
                     </tr>
@@ -18,7 +18,7 @@
                             <td>{{ $drink->id }}</td>
                             <td>{{ $drink->drink }}</td>
                             <td>{{ $drink->drink_price }}</td>
-                            <td>{{ $drink->type_id }}</td>
+                            <td>{{ $drink->type->type }}</td>
                             <td>
                                 {!! Form::open(['route' => ['edit-drinks.edit', $drink->id], 'method' => 'get']) !!}
                                 {!! Form::submit('修改',array('class'=>'btn btn-outline-dark')) !!}
