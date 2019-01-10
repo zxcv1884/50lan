@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c75c700e-8146-46e3-8845-87474a561de8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DrinksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DrinksController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/EditDrinkRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/EditDrinkRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/drinks/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/drinks/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/drinks/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/drinks/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/orders/create-drinks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orders/create-drinks.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/orders/drinks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orders/drinks.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/orders/edit-order-drinks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orders/edit-order-drinks.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/orders/edit-order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orders/edit-order.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/orders/edit-types.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orders/edit-types.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orders/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/orders/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orders/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/orders/types.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orders/types.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="c75c700e-8146-46e3-8845-87474a561de8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -485,7 +470,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155004000" />
+    <option name="totallyTimeSpent" value="155061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
